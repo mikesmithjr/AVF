@@ -1,6 +1,8 @@
-//Project 3 Visual Frameworks Term 1205
-//Michael Smith Jr.
-//The Diabetic Blood Sugar Log
+/*
+Project 1 AVF Term 1210
+Michael Smith Jr.
+AVF Test Page
+*/
 
 
 //Wait until the DOM is ready.
