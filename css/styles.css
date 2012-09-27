@@ -1,7 +1,7 @@
 /*
-Project 3 Visual Frameworks Term 1205
+Project 1 AVF Term 1210
 Michael Smith Jr.
-The Diabetic Blood Sugar Log
+AVF Test Page
 */
 
 
@@ -13,14 +13,8 @@ body{
 
 
 h1{
-	background: lightgrey;
-	
-	padding: 20px;
-	border: 1px solid black;
-	width: 75%;
-	
 	font-weight: bold;
-	font-size: 16px;
+	font-size: 36px;
 	font-family: Helvetica, sans-serif;
 }
 
