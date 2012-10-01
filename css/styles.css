@@ -5,7 +5,6 @@ AVF Test Page
 */
 
 
-
 body{
 	background: url("../images/texture.png");
     background-repeat: repeat;
@@ -30,7 +29,9 @@ legend{
 	font-family: Helvetica, sans-serif;
 }
 
-a:hover{color:green; outline: 1px dotted red;}
+a:hover{
+	color:red;
+}
 
 form{
 	overflow: scroll;
