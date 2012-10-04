@@ -16,14 +16,11 @@ AVF Test Page
 	//Successfully retrieved gps data
 	function showMap(position){
 		var element = document.getElementById("map");
+		var latitude = position.coords.latitude;
+		var longitude = position.coords.longitude;
 		element.innerHTML = //"Latitude: " +position.coords.latitude+ "<br />"+
 							//"Longitude: " +position.coords.longitude+ "<br />"
-							"http://maps.google.com/maps/api/staticmap?
-										zoom=5
-										&amp;size=540x280
-										&amp;maptype=satellite
-										&amp;markers=color:red|"+position.coords.latitude+","+position.coords.longitude+
-										"&amp;sensor=true"
+							"<img src= 'http://maps.google.com/maps/api/staticmap?zoom=5&amp;size=480x280&amp;maptype=roadmap&amp;markers=color:red'"+latitude+"','"+longitude+"'&amp;sensor=true'>"
 
 	};
 
@@ -33,3 +30,9 @@ AVF Test Page
 	              'message: ' + error.message + '\n');
 	    };
 
+	document.addEventListener("deviceready", myAlert, false);
+	function myAlert(){
+		navigator.notification.alert('You are kinda hot!', 'Hey You!', 'I know');
+
+
+	};
