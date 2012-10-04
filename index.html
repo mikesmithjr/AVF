@@ -40,50 +40,51 @@
 			<p>Michael Smith Jr</p>
 			<p>AVF 1210</p>
 			<p>This page is designed to show content and features of iOS and Android native APIs as well as external data APIs.</p>
-			<nav>
-				<a href='index2.html' title="Layout 2">Alt. Layout Option</a>
-
-			</nav>
 		</header>
-		<table border= "1">
+
+
+		
+<table>
 			<tr id="apiLinks">
-				<td>
-					
+				<td valign= "top">
+					<table>
 				<!--Native iOS and Android APIs-->
-					<h2>Native iOS and Android APIs</h2>
-					<ul>
-						<li><a href='#' title="Native 1"><img src= "images/Insulin.jpg">
-							<p>First Native API</p></a>
-						</li>
-						<li><a href='#' title="Native 2"><img src= "images/Insulin.jpg">
-							<p>Second Native API</p></a>
-						</li>
-						<li><a href='#' title="Native 3"><img src= "images/Insulin.jpg">
+					<tr><h2>Native iOS and Android APIs</h2></tr>
+					<tr>
+						<td><a href='map.html' title="Map" onclick= "onMapLoad();"><img src= "images/Insulin.jpg">
+							<p>Map</p></a>
+						</td>
+						<td><a href='#' title="Alert" onclick= "myAlert();"><img src= "images/Insulin.jpg">
+							<p>Alert</p></a>
+						</td>
+						<td><a href='#' title="Native 3"><img src= "images/Insulin.jpg">
 							<p>Third Native API</p></a>
-						</li>
-						<li><a href='#' title="Native 4"><img src= "images/Insulin.jpg">
-							<p>Fourth Native API</p></a>
-						</li>
-						<li><a href='#' title="Native 5"><img src= "images/Insulin.jpg">
-							<p>Fifth Native API</p></a>
-						</li>
-					</ul>
+						</td>
+					</tr>
+					
+					</table>
 				</td>
+				<td>&nbsp;</td>
 				<td valign= "top">
 				<!--Remote Data APIs-->
-					<h2>Remote Data APIs</h2>
-					<ul>
-						<li><a href='#' title="Remote Data 1"><img src= "images/Pills.jpg">
+					<table>
+					<tr><h2>Remote Data APIs</h2></tr>
+					<tr>
+						<td><a href='#' title="Remote Data 1"><img src= "images/Pills.jpg">
 							<p>First Remote Data API</p></a>
-						</li>
-						<li><a href='#' title="Remote Data 2"><img src= "images/Pills.jpg">
+						</td>
+					</tr>
+					<tr>
+						<td><a href='#' title="Remote Data 2"><img src= "images/Pills.jpg">
 							<p>Second Remote Data API</p></a>
-						</li>
-					</ul>
+						</td>
+					</tr>
+				</table>
 				</td>
 			</tr>
 			<tr>
-				<td></td>
+				<td>&nbsp;</td>
+				<td width= 165>&nbsp;</td>
 				<td>
 				<!--Research Data Links-->
 					<h2>Research Links</h2>
@@ -96,5 +97,7 @@
 				</td>
 			</tr>
 		</table>
+		<script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 	</body>
 </html>
