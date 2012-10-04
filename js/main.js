@@ -20,8 +20,8 @@ AVF Test Page
 		var longitude = position.coords.longitude;
 		element.innerHTML = //"Latitude: " +position.coords.latitude+ "<br />"+
 							//"Longitude: " +position.coords.longitude+ "<br />"
-							"<img src= 'http://maps.google.com/maps/api/staticmap?zoom=5&amp;size=480x280&amp;maptype=roadmap&amp;markers=color:red'"+latitude+"','"+longitude+"'&amp;sensor=true'>"
-
+							//"<img src= 'http://maps.google.com/maps/api/staticmap?zoom=5&amp;size=480x280&amp;maptype=roadmap&amp;markers=color:red'"+latitude+"','"+longitude+"'&amp;sensor=true'>"
+							'<img src="http://maps.google.com/maps/api/staticmap?zoom=5&size=540x280&maptype=roadmap&markers=color:red|33.2845474,-96.7817025&sensor=true">'
 	};
 
 	// onError Callback receives a PositionError object
