@@ -1,7 +1,7 @@
 <!doctype html>
 <!--Project 1 AVF 1210-->
 <!--Michael Smith Jr.-->
-<!--AVF Test Geolocation-->
+<!--AVF Test Network Info-->
 <html>
 	<head>
 		
@@ -26,25 +26,25 @@
 		    <meta anme="MobileOptimized" content="320">
 
 		<!--Page Title-->
-		<title>AVF Test Geolocation</title>
+		<title>AVF Test Network Info</title>
 
 		<!-- Link CSS -->
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
-	
+		
 
 	</head>
-	<body onload= "onMapLoad()">
+	<body onload= "accelTest()">
 		<!-- Page Content Lives here. -->
 		<header>
 			<h1>AVF Test App Page</h1>
 			<p>Michael Smith Jr</p>
 			<p>AVF 1210</p>
-			<p>This is a map of your current location.</p>
+			<p>This page shows some information about your battery.</p>
 		</header>
 
 		<a href="index.html">Home</a>
 		
-		<a href="#" id= "map"></a>
+		<div id= "map"></div>
 		
 		
 		<script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
