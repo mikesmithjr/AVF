@@ -16,7 +16,7 @@ AVF Test Page
     // Cordova is ready
     //
     function accelTest() {
-        startWatch();
+        setTimeout("startWatch()", 3000);
     };
 
     // Start watching the acceleration
