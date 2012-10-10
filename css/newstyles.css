@@ -4,16 +4,76 @@
 body{
 	background: url(../images/texture.png);
     background-repeat: repeat;
+    line-height: 1.5em;
+    font-family: Arial;
+    font-size: 14px;
 }
 
-.allLinks{
-	background-color: grey;
+.page{
+	max-width: 980px;
+	margin: 0px auto 0px auto;
+	position: relative;
+	background-color: lightgrey;
+}
+
+h1{
+	font-size: 2em;
+	font-weight: normal;
+	margin: 0 0 .5em 0;
+}
+
+h2{
+	font-size: 1.7em;
+	margin: 0 0 1em 0;
+}
+
+h3{
+	font-size: 1.5em;
+	margin: 0 0 1em 0;
+}
+
+p{
+	margin: 0 0 .75em 0;
+}
+
+a:hover{
+	color:red;
+}
+
+li{
+	
+	list-style: none;
+	
 }
 
 footer{
 	background: white;
-	margin-left: 10px;
-	margin-right: 10px;
+	padding: 10px 10px 10px 0;
 	border: 1px solid black;
-	text-align: center;
+}
+
+a.apiLink{
+	text-transform: uppercase;
+	font-size: .8em;
+	font-weight: bold;
+	text-decoration: none;
+	margin: .5em 0em 0em 0em;
+}
+
+.allLinks h2{
+	font-size: 1.1em;
+	margin: 0px;
+}
+
+nav a{
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-block;
+	font-weight: bold;
+	font-size: .9em;
+}
+
+.floatFix{
+	clear: both;
+	line-height: 1px;
 }
