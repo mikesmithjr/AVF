@@ -1,0 +1,19 @@
+
+
+
+body{
+	background: url(../images/texture.png);
+    background-repeat: repeat;
+}
+
+.allLinks{
+	background-color: grey;
+}
+
+footer{
+	background: white;
+	margin-left: 10px;
+	margin-right: 10px;
+	border: 1px solid black;
+	text-align: center;
+}
