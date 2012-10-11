@@ -17,93 +17,78 @@
 
 		<!--Mobile Viewing Meta-->
 		    <!--Iphone-->
-		    <meta name="viewport" content="user-scalable=no, width=device-width">  
+		    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0"/>  
 		    <!--Android-->
 		    <meta name="viewport" content="target-densitydpi=device-dpi">
 		    <!--Older Devices-->
 		    <meta name="HandheldFriendly" content="True">
 		    <!--IE Browsers-->
-		    <meta anme="MobileOptimized" content="320">
+		    <meta name="MobileOptimized" content="320">
 
 		<!--Page Title-->
 		<title>AVF Test App Page</title>
 
 		<!-- Link CSS -->
-		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<link rel="stylesheet" type="text/css" href="css/newstyles.css"/>
+		<link rel="stylesheet" type="text/css" href="css/newstyles_lrg.css"/>
+		<link rel="stylesheet" type="text/css" media="only screen and (min-width:50px) and (max-width: 500px)" href="css/newstyles_sm.css"/>
+		<link rel="stylesheet" type="text/css" media="only screen and (min-width:501px) and (max-width: 800px)" href="css/newstyles_med.css"/>
 	
 
 	</head>
 	<body>
 		<!-- Page Content Lives here. -->
-		<header>
-			<h1>AVF Test App Page</h1>
-			<p>Michael Smith Jr</p>
-			<p>AVF 1210</p>
-			<p>This page is designed to show content and features of iOS and Android native APIs as well as external data APIs.</p>
-		</header>
 
+		<div class="page">
+			<header>
+				
+			</header>
 
-		
-<table>
-			<tr id="apiLinks">
-				<td valign= "top">
-					<table>
+			<article>
+				<h1>AVF Test App Page</h1>
+				<p>Michael Smith Jr</p>
+				<p>AVF 1210</p>
+				<p>This page is designed to show content and features of iOS and Android native APIs as well as external data APIs.</p>
+
+			</article>
+
+			
+			<div class="allLinks">
 				<!--Native iOS and Android APIs-->
-					<tr><h2>Native iOS and Android APIs</h2></tr>
-					<tr>
-						<td><a href='map.html' title="Map" onclick= "onMapLoad();"><img src= "images/Insulin.jpg">
-							<p>Map</p></a>
-						</td>
-						<td width= 65>&nbsp;</td>
-						<td><a href='#' title="Alert" onclick= "myAlert();"><img src= "images/Insulin.jpg">
-							<p>Alert</p></a>
-						</td>
-					</tr>
-					<tr>
-						<td><a href='deviceInfo.html' title="Device Information"><img src= "images/Insulin.jpg">
-							<p>Device Info</p></a>
-						</td>
-						<td width= 65>&nbsp;</td>
-						<td><a href='netInfo.html' title="Battery Info"><img src= "images/Insulin.jpg">
-							<p>Network Info</p></a>
-						</td>
-					</tr>
-					
-					</table>
-				</td>
-				<td>&nbsp;</td>
-				<td valign= "top">
+				<ul class="linkBlock nativeLinks">
+					<li><h2>Native iOS and Android APIs</h2></li>
+					<li><a class="apiLink" href='map.html' title="Map" onclick= "onMapLoad();"><img src= "images/Insulin.jpg"><p>Map</p></a></li>
+					<li><a class="apiLink" href='#' title="Alert" onclick= "myAlert();"><img src= "images/Insulin.jpg"><p>Alert</p></a></li>
+					<li><a class="apiLink" href='deviceInfo.html' title="Device Information"><img src= "images/Insulin.jpg"><p>Device Info</p></a></li>
+					<li><a class="apiLink" href='netInfo.html' title="Battery Info"><img src= "images/Insulin.jpg"><p>Network Info</p></a></li>
+				</ul>
+				<br>
 				<!--Remote Data APIs-->
-					<table>
-					<tr><h2>Remote Data APIs</h2></tr>
-					<tr>
-						<td><a href='#' title="Remote Data 1"><img src= "images/Pills.jpg">
-							<p>First Remote Data API</p></a>
-						</td>
-					</tr>
-					<tr>
-						<td><a href='#' title="Remote Data 2"><img src= "images/Pills.jpg">
-							<p>Second Remote Data API</p></a>
-						</td>
-					</tr>
-				</table>
-				</td>
-			</tr>
-			<tr>
-				<td>&nbsp;</td>
-				<td width= 165>&nbsp;</td>
-				<td>
+				<ul class="linkBlock remoteLinks">	
+					<li><h2>Remote Data APIs</h2></li>
+					<li><a class="apiLink" href='#' title="Twitter API"><img src= "images/Pills.jpg"><p>Twitter API</p></a></li>
+					<li><a class="apiLink" href='#' title="FML API"><img src= "images/Pills.jpg"><p>FML API</p></a></li>
+				</ul>
+				<br>
 				<!--Research Data Links-->
-					<h2>Research Links</h2>
-					<ul>
-						<li><a href='researchWeek1.html' title="Week 1 Research">Week 1 Research</a></li>
-						<li><a href='week2Video.html' title="Week 2 Research">Week 2 Reflection Video</a></li>
-						<li><a href='#' title="Week 3 Research">Week 3 Research</a></li>
-						<li><a href='#' title="Week 4 Research">Week 4 Research</a></li>
-					</ul>
-				</td>
-			</tr>
-		</table>
+				<ul class="linkBlock research">
+					<li><h2>Research Links</h2></li>
+					<li><a class="resLink" href='researchWeek1.html' title="Week 1 Research">Week 1 Research</a></li>
+					<li><a class="resLink" href='week2Research.html' title="Week 2 Research">Week 2 Research</a></li>
+					<li><a class="resLink" href='#' title="Week 3 Research">Week 3 Research</a></li>
+					<li><a class="resLink" href='#' title="Week 4 Research">Week 4 Research</a></li>
+				</ul>
+				<div class="floatFix"></div>
+			</div>
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="week2Video.html">Videos</a>
+			</nav>
+			<footer>
+				<p>Michael R. Smith Jr. AVF1210</p>
+
+			</footer>
+		</div>
 		<script type="text/javascript" charset="utf-8" src="cordova-2.1.0.js"></script>
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>

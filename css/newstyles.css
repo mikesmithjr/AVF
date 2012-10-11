@@ -47,12 +47,20 @@ li{
 }
 
 footer{
-	background: white;
+	background: lightblue;
 	padding: 10px 10px 10px 0;
 	border: 1px solid black;
 }
 
-a.apiLink{
+a.apiLink {
+	text-transform: uppercase;
+	font-size: .8em;
+	font-weight: bold;
+	text-decoration: none;
+	margin: .5em 0em 0em 0em;
+}
+
+a.resLink {
 	text-transform: uppercase;
 	font-size: .8em;
 	font-weight: bold;
@@ -63,6 +71,10 @@ a.apiLink{
 .allLinks h2{
 	font-size: 1.1em;
 	margin: 0px;
+}
+
+nav{
+	background: lightblue;
 }
 
 nav a{
