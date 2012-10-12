@@ -62,49 +62,67 @@ AVF Test Page
 
 	//Twitter Info
 	document.addEventListener("deviceready", twitterInfo, false);
-	console.log("hello");
 	function twitterInfo(){
 		console.log("Getting Twitter Info");
-		$.getJSON("http://search.twitter.com/search.json?q=diabetic&rpp=5&include_entities=true&result_type=recent&callback=?",
+		$.getJSON("http://search.twitter.com/search.json?q=diabetis&rpp=5&include_entities=true&result_type=recent&callback=?",
 			function(tweets){
 				console.log(tweets);
 				for (i=0, j=tweets.results.length; i<j; i++){
 					$(".tweets")
-						.append("<li>" + "<p>" + "<img src='" + tweets.results[i].profile_image_url + "'/><br/>" + tweets.results[i].text + "'<em>" + "</p>" + "</li>");
+						.append("<li class='apiLink'>" + "<p>" + "<img src='" + 
+							tweets.results[i].profile_image_url + 
+							"'/><br/>" + tweets.results[i].text + 
+							"'<em>" + "</p>" + "</li>");
 				}
 
 			}
-				/*$.ajax({
-				    url      : "http://search.twitter.com/search.json?q=diabetic&rpp=5&include_entities=true&result_type=recent&callback=?",
-				    type     : "GET",
-				    dataType : "json",
-				    success  : function(json){
-				        console.log(json);
-				        $.each(json.rows, function(i, tweet){
-				        	console.log(i + " " + tweet.value.fname[0] + " " + tweet.value.fname[1]);
-				        	
-				        	
-				            /// do stuff
-						    var makeli = $("<li id='listItem"+i+"'></li>");
-						    var optSubText = $( "<img src='"+tweet.value.treatments[1]+".jpg'/>"+
-				    				"<h3>"+tweet.value.date[1]+"</h3>"+
-				    				"<h3>"+tweet.value.currentTime[1]+"</h3>"+
-				    				"<p>"+tweet.value.fname[0]+" "+tweet.value.fname[1]+"</p>"+
-				    				"<p>"+tweet.value.lname[0]+" "+tweet.value.lname[1]+"</p>"+
-				    				"<p>"+tweet.value.bsreading[0]+" "+tweet.value.bsreading[1]+"</p>"+
-				    				"<p>"+tweet.value.sex[0]+" "+tweet.value.sex[1]+"</p>"+
-				    				"<p>"+tweet.value.condition[0]+" "+tweet.value.condition[1]+"</p>"+
-				    				"<p>"+tweet.value.treatments[0]+" "+tweet.value.treatments[1]+"</p>"+
-				    				"<p>"+tweet.value.comments[0]+" "+logItem.value.comments[1]+"</p>");
-				    			
-						    
-						 	});
-				   		
-				    },
-				    error: function(){
-				    	alert("JSON Ajax Error");
-				    }
-				});*/
 		
 	)};
+
+	//Weather Underground Info
+	document.addEventListener("deviceready", weatherInfo, false);
+	function weatherInfo(){
+		$.ajax({ 
+			url : "http://api.wunderground.com/api/0298384b5e24ce52/geolookup/conditions/q/TX/Dallas.json",
+		 	dataType : "jsonp",
+		 	 success : function(weather) { 
+		 	 	console.log(weather);
+		 	 	var condition_pic = weather['current_observation']['icon_url'];
+		 	 	var city = weather['location']['city'];
+		 	 	var state = weather['location']['state'];
+		 	 	var temp_f = weather['current_observation']['temp_f'];
+		 	 	var humidity = weather['current_observation']['relative_humidity'];
+		 	 	var wind_speed = weather['current_observation']['wind_mph'];
+		 	 	var wind_dir = weather['current_observation']['wind_dir'];
+		 	 	var wind_gust = weather['current_observation']['wind_gust_mph'];
+
+		 	 	$(".forcast")
+						.append("<li>" + "<p>" + "<img src='" +
+							condition_pic + "'/><br/>" + 
+							city + ", " + state + 
+							"<br/>" + "Current Temp: " + temp_f + "°F" + "<br/>"
+							+ "Current Humidity: " + humidity + "<br/>" 
+							+ "Wind Speed: " + wind_speed + " Mph" + "<br/>"
+							+ "Wind Direction: " + wind_dir + "<br/>"
+							+ "Gusting To: " + wind_gust + " Mph" + "<br/>"
+							+ "</p>" + "</li>");
+
+		 	 }
+		 });
+
+
+	};
+
+
+
+
+
+
+
+
+
+
+
+
+
 	

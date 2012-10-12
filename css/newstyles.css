@@ -89,3 +89,9 @@ nav a{
 	clear: both;
 	line-height: 1px;
 }
+
+.forcast{
+	background-color: white;
+	border: 1px solid black;
+	width: 33%;
+}
