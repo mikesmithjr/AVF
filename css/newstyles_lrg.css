@@ -31,6 +31,11 @@ article{
 	float: left;
 }
 
+.tweets{
+	width: 25%;
+	float: left;
+}
+
 nav{
 	background: lightblue;
 	top: 5px
