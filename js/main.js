@@ -113,6 +113,26 @@ AVF Test Page
 
 	};
 
+	//Radar Test Page
+	document.addEventListener("deviceready", onRadLoad, false);
+
+	//Pulling Info from GPS
+	function onRadLoad(){
+		navigator.geolocation.getCurrentPosition(showRad, onError);
+	};
+
+	//Successfully retrieved gps data
+	function showRad(position){
+		var element = document.getElementById("radar");
+		var latitude = position.coords.latitude;
+		var longitude = position.coords.longitude;
+		var location = latitude+","+longitude;
+		var radImg="http://api.wunderground.com/api/0298384b5e24ce52/animatedradar/image.gif?centerlat="+latitude+"&centerlon="+longitude+"&radius=100&width=280&height=280&newmaps=1&timelabel=1&timelabel.y=10&num=5&delay=50";
+		element.innerHTML = "<img src='"+radImg+"'>";
+							 
+	};
+
+
 
 
 
