@@ -31,6 +31,8 @@ AVF Test Page
 	        alert('code: '    + error.code    + '\n' +
 	              'message: ' + error.message + '\n');
 	    };
+
+
 	//On Screen Alert
 	document.addEventListener("deviceready", deviceReady, false);
 
@@ -127,7 +129,7 @@ AVF Test Page
 		var latitude = position.coords.latitude;
 		var longitude = position.coords.longitude;
 		var location = latitude+","+longitude;
-		var radImg="http://api.wunderground.com/api/0298384b5e24ce52/animatedradar/image.gif?centerlat="+latitude+"&centerlon="+longitude+"&radius=100&width=280&height=280&newmaps=1&timelabel=1&timelabel.y=10&num=5&delay=50";
+		var radImg="http://api.wunderground.com/api/0298384b5e24ce52/animatedradar/image.gif?centerlat="+latitude+"&centerlon="+longitude+"&radius=50&width=480&height=480&newmaps=1&timelabel=1&timelabel.y=10&num=5&delay=50";
 		element.innerHTML = "<img src='"+radImg+"'>";
 							 
 	};
