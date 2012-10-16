@@ -83,12 +83,23 @@ AVF Test Page
 
 	//Weather Underground Info
 	document.addEventListener("deviceready", weatherInfo, false);
+
+	//Geo added to Forcast page
 	function weatherInfo(){
+		navigator.geolocation.getCurrentPosition(showCond, onError);
+
+	};
+
+	//show forcast
+	function showCond(position){
+		var latitude = position.coords.latitude;
+		var longitude = position.coords.longitude;
+		var location = latitude+","+longitude;
 		$.ajax({ 
-			url : "http://api.wunderground.com/api/0298384b5e24ce52/geolookup/conditions/q/TX/Dallas.json",
+			url : "http://api.wunderground.com/api/0298384b5e24ce52/geolookup/conditions/q/" + location +".json",
 		 	dataType : "jsonp",
 		 	 success : function(weather) { 
-		 	 	console.log(weather);
+		 	 	//console.log(weather);
 		 	 	var condition_pic = weather['current_observation']['icon_url'];
 		 	 	var city = weather['location']['city'];
 		 	 	var state = weather['location']['state'];
