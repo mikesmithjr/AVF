@@ -66,15 +66,16 @@ AVF Test Page
 	document.addEventListener("deviceready", twitterInfo, false);
 	function twitterInfo(){
 		console.log("Getting Twitter Info");
-		$.getJSON("http://search.twitter.com/search.json?q=diabetis&rpp=5&include_entities=true&result_type=recent&callback=?",
+		$.getJSON("http://search.twitter.com/search.json?q=diabetis&lang=en&rpp=10&include_entities=true&result_type=recent&callback=?",
 			function(tweets){
 				console.log(tweets);
 				for (i=0, j=tweets.results.length; i<j; i++){
 					$(".tweets")
 						.append("<li class='apiLink'>" + "<p>" + "<img src='" + 
 							tweets.results[i].profile_image_url + 
-							"'/><br/>" + tweets.results[i].text + 
-							"'<em>" + "</p>" + "</li>");
+							"'/><br/>" + "<h2>" + tweets.results[i].from_user + "</h2>" + 
+							 tweets.results[i].created_at + "<br/>" + "<br/>" + tweets.results[i].text + 
+							 "</p>" + "</li>");
 				}
 
 			}

@@ -94,6 +94,9 @@ nav a{
 .forcast{
 	background-color: white;
 	border: 1px solid black;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
 	width: 25%;
 }
 

@@ -31,8 +31,16 @@ article{
 	float: left;
 }
 
-.tweets{
-	width: 25%;
+.tweets li{
+	background-color: white;
+	border: 1px solid black;
+	margin: 5px;
+	padding: 5px;
+	width: 40%;
+	height: 250px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
 	float: left;
 }
 
