@@ -111,9 +111,9 @@ AVF Test Page
 
 		 	 	$(".forcast")
 						.append("<li>" + "<p>" + "<img src='" +
-							condition_pic + "'/><br/>" + 
-							city + ", " + state + 
-							"<br/>" + "Current Temp: " + temp_f + "°F" + "<br/>"
+							condition_pic + "'/><br/>" + "<h2>" + 
+							city + ", " + state + "</h2>" +
+							 "Current Temp: " + temp_f + "°F" + "<br/>"
 							+ "Current Humidity: " + humidity + "<br/>" 
 							+ "Wind Speed: " + wind_speed + " Mph" + "<br/>"
 							+ "Wind Direction: " + wind_dir + "<br/>"
