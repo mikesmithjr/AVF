@@ -2,6 +2,12 @@
 body{
 	background-image: none;
 }
+
+header {
+	height: 75px;
+	background: url(../images/headersm.jpg) no-repeat right 0px;
+}
+
 article{
 	padding: 20px 20px 10px 20px;
 }

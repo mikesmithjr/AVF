@@ -81,7 +81,7 @@ AVF Test Page
 
 			}
 		
-	)}
+	);}
 
 	//Weather Underground Info
 	//document.addEventListener("deviceready", weatherInfo, false);
@@ -102,25 +102,25 @@ AVF Test Page
 		 	dataType : "jsonp",
 		 	 success : function(weather) { 
 		 	 	//console.log(weather);
-		 	 	var condition_pic = weather['current_observation']['icon_url'];
-		 	 	var city = weather['location']['city'];
-		 	 	var state = weather['location']['state'];
-		 	 	var temp_f = weather['current_observation']['temp_f'];
-		 	 	var humidity = weather['current_observation']['relative_humidity'];
-		 	 	var wind_speed = weather['current_observation']['wind_mph'];
-		 	 	var wind_dir = weather['current_observation']['wind_dir'];
-		 	 	var wind_gust = weather['current_observation']['wind_gust_mph'];
+		 	 	var condition_pic = weather.current_observation.icon_url;
+		 	 	var city = weather.location.city;
+		 	 	var state = weather.location.state;
+		 	 	var temp_f = weather.current_observation.temp_f;
+		 	 	var humidity = weather.current_observation.relative_humidity;
+		 	 	var wind_speed = weather.current_observation.wind_mph;
+		 	 	var wind_dir = weather.current_observation.wind_dir;
+		 	 	var wind_gust = weather.current_observation.wind_gust_mph;
 
 		 	 	$(".forcast")
 						.append("<li>" + "<p>" + "<img src='" +
 							condition_pic + "'/><br/>" + "<h2>" + 
 							city + ", " + state + "</h2>" +
-							 "Current Temp: " + temp_f + "°F" + "<br/>"
-							+ "Current Humidity: " + humidity + "<br/>" 
-							+ "Wind Speed: " + wind_speed + " Mph" + "<br/>"
-							+ "Wind Direction: " + wind_dir + "<br/>"
-							+ "Gusting To: " + wind_gust + " Mph" + "<br/>"
-							+ "</p>" + "</li>");
+							 "Current Temp: " + temp_f + "°F" + "<br/>" +
+							 "Current Humidity: " + humidity + "<br/>" +
+							 "Wind Speed: " + wind_speed + " Mph" + "<br/>" +
+							 "Wind Direction: " + wind_dir + "<br/>" +
+							 "Gusting To: " + wind_gust + " Mph" + "<br/>" +
+							 "</p>" + "</li>");
 
 		 	 }
 		 });

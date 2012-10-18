@@ -13,6 +13,10 @@ nav{
 }
 /*Large Screen rules*/
 
+header{
+	 height: 275px;
+	 background: url(../images/headerlrg.jpg) no-repeat right 0px;
+}
 
 ul.linkBlock{
 	display: inline-block;
@@ -46,7 +50,7 @@ article{
 
 nav{
 	background: lightblue;
-	top: 5px
+	top: 275px
 }
 
 nav a{

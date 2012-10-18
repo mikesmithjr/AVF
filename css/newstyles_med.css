@@ -1,7 +1,11 @@
 
+header{
+	height: 200px;
+	background: url(../images/headermed.jpg) no-repeat 90% 0px;
+}
 
 nav{
-	top: 5px;
+	top: 200px;
 }
 
 nav a{
