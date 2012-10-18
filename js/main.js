@@ -6,14 +6,22 @@ AVF Test Page
 
 
 
-    
+    document.addEventListener("deviceready", deviceReady, false);
+
+	function deviceReady(){
+		//nothing
+	}
+	function dismissed(){
+		//not sure
+	}
+
 	//Map Test Page
-	document.addEventListener("deviceready", onMapLoad, false);
+	//document.addEventListener("deviceready", onMapLoad, false);
 
 	//Pulling Info from GPS
 	function onMapLoad(){
 		navigator.geolocation.getCurrentPosition(showMap, onError);
-	};
+	}
 
 	//Successfully retrieved gps data
 	function showMap(position){
@@ -24,32 +32,25 @@ AVF Test Page
 		var mapImg="http://maps.googleapis.com/maps/api/staticmap?center="+location+"&markers=color:blue%7C"+location+"&zoom=14&size=400x300&sensor=false";
 		element.innerHTML = "<img src='"+mapImg+"'>";
 							 
-	};
+	}
 
 	// onError Callback receives a PositionError object
 	    function onError(error) {
 	        alert('code: '    + error.code    + '\n' +
 	              'message: ' + error.message + '\n');
-	    };
+	    }
 
 
 	//On Screen Alert
-	document.addEventListener("deviceready", deviceReady, false);
-
-	function deviceReady(){
-		//nothing
-	};
-	function dismissed(){
-		//not sure
-	};
+	
 
 	function myAlert(){
 		navigator.notification.alert('You are kinda hot!', dismissed, 'Hey You!', 'I know');
 
 
-	};
+	}
 	//Display Device Info
-	document.addEventListener("deviceready", devInfo, false);
+	//document.addEventListener("deviceready", devInfo, false);
 
 	function devInfo(){
 		var element = document.getElementById('devInfo');
@@ -59,11 +60,11 @@ AVF Test Page
                             '<li>Device Operating System: ' + device.platform + '</li>' +  
                             '<li>Operating System Version: '  + device.version  + '</li>';
 
-	};
+	}
 
 
 	//Twitter Info
-	document.addEventListener("deviceready", twitterInfo, false);
+	//document.addEventListener("deviceready", twitterInfo, false);
 	function twitterInfo(){
 		console.log("Getting Twitter Info");
 		$.getJSON("http://search.twitter.com/search.json?q=diabetis&lang=en&rpp=10&include_entities=true&result_type=recent&callback=?",
@@ -80,16 +81,16 @@ AVF Test Page
 
 			}
 		
-	)};
+	)}
 
 	//Weather Underground Info
-	document.addEventListener("deviceready", weatherInfo, false);
+	//document.addEventListener("deviceready", weatherInfo, false);
 
 	//Geo added to Forcast page
 	function weatherInfo(){
 		navigator.geolocation.getCurrentPosition(showCond, onError);
 
-	};
+	}
 
 	//show forcast
 	function showCond(position){
@@ -125,15 +126,15 @@ AVF Test Page
 		 });
 
 
-	};
+	}
 
 	//Radar Test Page
-	document.addEventListener("deviceready", onRadLoad, false);
+	//document.addEventListener("deviceready", onRadLoad, false);
 
 	//Pulling Info from GPS
 	function onRadLoad(){
 		navigator.geolocation.getCurrentPosition(showRad, onError);
-	};
+	}
 
 	//Successfully retrieved gps data
 	function showRad(position){
@@ -144,10 +145,47 @@ AVF Test Page
 		var radImg="http://api.wunderground.com/api/0298384b5e24ce52/animatedradar/image.gif?centerlat="+latitude+"&centerlon="+longitude+"&radius=50&width=480&height=480&newmaps=1&timelabel=1&timelabel.y=10&num=5&delay=50";
 		element.innerHTML = "<img src='"+radImg+"'>";
 							 
-	};
+	}
 
+	// Acceleration test
+	function accelTest(){
+		startWatch();
+	}
 
+	// Start watching the acceleration
+    //
+    function startWatch() {
 
+        // Update acceleration every 3 seconds
+        var options = { frequency: 3000 };
+
+        watchID = navigator.accelerometer.watchAcceleration(onSuccess, onError, options);
+    }
+
+    // Stop watching the acceleration
+    //
+    function stopWatch() {
+        if (watchID) {
+            navigator.accelerometer.clearWatch(watchID);
+            watchID = null;
+        }
+    }
+
+    // onSuccess: Get a snapshot of the current acceleration
+    //
+    function onSuccess(acceleration) {
+        var element = document.getElementById('accelerometer');
+        element.innerHTML = 'Acceleration X: ' + acceleration.x + '<br />' +
+                            'Acceleration Y: ' + acceleration.y + '<br />' +
+                            'Acceleration Z: ' + acceleration.z + '<br />' +
+                            'Timestamp: '      + acceleration.timestamp + '<br />';
+    }
+
+    // onError: Failed to get the acceleration
+    //
+    function onError() {
+        alert('onError!');
+    }
 
 
 

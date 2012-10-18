@@ -32,3 +32,8 @@ nav a:hover{
 footer{
 	border-top: 1px solid blue;
 }
+
+.tweets li{
+	width: auto;
+	height: auto;
+}

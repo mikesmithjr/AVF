@@ -19,3 +19,11 @@ nav a{
 body{
 	background-image: none;
 }
+
+.tweets li{
+	height: 300px;
+}
+
+h2{
+	font-size: 1.2em;
+}
