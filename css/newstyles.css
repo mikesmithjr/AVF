@@ -10,7 +10,7 @@ body{
 }
 
 .page{
-	max-width: 980px;
+	max-width: 900px;
 	margin: 0px auto 0px auto;
 	position: relative;
 	background-color: lightgrey;
@@ -47,6 +47,7 @@ li{
 }
 
 footer{
+	text-align: center;
 	background: lightblue;
 	padding: 10px 10px 10px 0;
 	border: 1px solid black;
@@ -93,8 +94,12 @@ nav a{
 .forcast{
 	background-color: white;
 	border: 1px solid black;
-	width: 33%;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+	width: 25%;
 }
+
 
 a#radar{
 	display: block;
