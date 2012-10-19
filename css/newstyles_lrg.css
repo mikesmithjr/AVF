@@ -48,6 +48,32 @@ article{
 	float: left;
 }
 
+#devInfo li{
+	background-color: lightblue;
+	border: 1px solid black;
+	margin: 5px;
+	padding: 5px;
+	width: 45%;
+	height: 35px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+	float: left;
+}
+
+#accel li{
+	background-color: lightblue;
+	border: 1px solid black;
+	margin: 5px;
+	padding: 5px;
+	width: 45%;
+	height: 35px;
+	-moz-border-radius: 12px;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
+	float: left;
+}
+
 nav{
 	background: lightblue;
 	top: 275px
