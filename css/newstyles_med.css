@@ -1,7 +1,11 @@
 
+header{
+	height: 200px;
+	background: url(../images/headermed.jpg) no-repeat 90% 0px;
+}
 
 nav{
-	top: 5px;
+	top: 200px;
 }
 
 nav a{
@@ -18,4 +22,12 @@ nav a{
 
 body{
 	background-image: none;
+}
+
+.tweets li{
+	height: 300px;
+}
+
+h2{
+	font-size: 1.2em;
 }
